@@ -112,7 +112,7 @@ if __name__ == '__main__':
     URL = "https://movie-database-imdb-alternative.p.rapidapi.com/"
     HEADERS = {
         'x-rapidapi-host': "movie-database-imdb-alternative.p.rapidapi.com",
-        'x-rapidapi-key': "feed4b9546mshd3994640abc7ce7p161b94jsn383f433dd19f"
+        'x-rapidapi-key': "" # your secret key
     }
     CLIENT_HDFS = InsecureClient('http://namenode:9870', user='root')
     RAW_DATA_DIRECTORY = '/user/root/test/'
