@@ -1,0 +1,67 @@
+<!--doctype html-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>GROUP 12</title>
+    <!--Adding Links  -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/swiper.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <style>
+      body {
+        background-image: url("{{url_for('static', filename='image/universe wallpaper 119 - 3490x1963.jpg')}}");
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <div class="heading2">
+        <h1> P H I M &emsp; M O I &emsp; . N E T</h1>
+      </div>
+      <div class="heading">
+        <h1>S E A R C H &emsp; F I L M</h1>
+      </div>
+      <form action="/" method="POST">
+        <input
+          type="text"
+          name="name"
+          class="question"
+          id="nme"
+          required
+          autocomplete="off"
+          style="text-align: center;"
+          onkeypress="validate(event)"
+        />
+        <input type="submit" style="border-radius: 50%;" value="Submit!" />
+      </form>
+    </center>
+    <!--slider 1 bags------------------------------------------>
+    <div class="heading">
+      <h1>R E S U L T</h1>
+    </div>
+    <!--swiper slider-->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        {% for a in user %}
+          <div class="swiper-slide">
+            <div class="slider-box">
+              <p class="time">{{ a.type_ }}</p>
+              <p class="detail">
+                <img src="{{ a['Poster'] }}" width="120" height="150">
+                <a href="#" class="price"><h3>{{ a['Title'] }}</h3></a>
+                <p><strong>IMDB ID: </strong>{{ a['imdbID'] }}</p>
+                <p><strong>Genres: </strong>{{ ', '.join(a['Genre']) }}</p>
+                <p><strong>IMDB Rating: </strong>{{ a['imdbRating'] }}</p>
+              </p>
+              <div class="cart">
+                <a href="{{ url_for('show_details', id=a['imdbID']) }}"><strong><h3>GO</h3></strong></a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!--swiper  slider end-->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/swiper.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/script.js')}}"></script>
+  </body>
+</html>

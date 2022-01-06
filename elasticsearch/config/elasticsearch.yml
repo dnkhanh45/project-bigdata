@@ -1,0 +1,2 @@
+cluster.name: "docker-cluster"
+xpack.security.enabled: false

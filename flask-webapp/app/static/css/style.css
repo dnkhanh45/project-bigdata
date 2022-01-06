@@ -1,0 +1,268 @@
+@charset "utf-8";
+/* CSS Document */
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: montserrat, sans-serif;
+  background-color: rgba(241, 241, 241, 1);
+}
+.swiper-slide {
+  width: 250px !important;
+}
+
+.slider-box {
+  margin: 20px;
+  height: 450px;
+  width: 250px;
+  position: relative;
+  background-color: rgba(176, 167, 179, 0.75);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid rgba(187, 187, 187, 0.4);
+}
+.slider-box a {
+  text-decoration: none;
+  text-align: center;
+}
+.img-box {
+  height: 170px;
+}
+.img-box img {
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+.time {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  color: #f16007;
+}
+.detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  font-size: 13px;
+  line-height: 35px;
+}
+.price {
+  color: #ffffff;
+  background-color: #ff555b;
+  line-height: 20px;
+}
+.cart {
+  position: absolute;
+  bottom: 0px;
+  height: 45px;
+  background-color: #ff696e;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart a {
+  color: #ffffff;
+}
+.slider-box:hover {
+  box-shadow: 2px 2px 12px rgba(47, 47, 47, 0.4);
+}
+.slider-box:hover .img-box img {
+  transform: scale(1.07);
+  transition: all ease 0.3s;
+}
+.cart:hover {
+  transform: scale(1.1);
+  background-color: #fe9048;
+  box-shadow: 2px 2px 12px rgba(47, 47, 47, 0.4);
+  transition: all ease 0.1s;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+}
+.heading h1 {
+  border-left: 2px solid #000000;
+  border-right: 2px solid #000000;
+  background-color: rgba(204, 86, 240, 0.85);;
+  text-shadow: 2px 2px 12px rgba(69, 66, 66, 0.3);
+  padding: 0px 10px;
+  color: #ffffff;
+  margin: 20px;
+  font-size: 30px;
+  font-family: calibri;
+}
+
+.heading2 {
+  display: flex;
+  justify-content: center;
+}
+.heading2 h1 {
+  border-left: 2px solid #000000;
+  border-right: 2px solid #000000;
+  background-color: rgba(88, 95, 197, 0.85);
+  text-shadow: 2px 2px 12px rgba(69, 66, 66, 0.3);
+  padding: 0px 10px;
+  color: #ffffff;
+  margin: 20px;
+  font-size: 50px;
+  font-family: calibri;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 2.5%;
+}
+
+input,
+span,
+label,
+textarea {
+  font-family: "Ubuntu", sans-serif;
+  display: block;
+  margin: 10px;
+  padding: 5px;
+  border: none;
+  font-size: 22px;
+}
+
+textarea:focus,
+input:focus {
+  outline: 0;
+}
+/* Question */
+
+input.question,
+textarea.question {
+  font-size: 48px;
+  font-weight: 300;
+  border-radius: 2px;
+  margin: 0;
+  border: none;
+  width: 80%;
+  background: rgba(142, 218, 218, 0.65);
+  transition: padding-top 0.2s ease, margin-top 0.2s ease;
+  overflow-x: hidden; /* Hack to make "rows" attribute apply in Firefox. */
+}
+/* Underline and Placeholder */
+
+input.question + label,
+textarea.question + label {
+  display: block;
+  position: relative;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  width: 10%;
+  border-top: 1px solid red;
+  -webkit-transition: width 0.4s ease;
+  transition: width 0.4s ease;
+  height: 0px;
+}
+
+input.question:focus + label,
+textarea.question:focus + label {
+  width: 80%;
+}
+
+input.question:focus,
+input.question:valid {
+  padding-top: 35px;
+}
+
+textarea.question:valid,
+textarea.question:focus {
+  margin-top: 35px;
+}
+
+input.question:focus + label > span,
+input.question:valid + label > span {
+  top: -100px;
+  font-size: 22px;
+  color: #333;
+}
+
+textarea.question:focus + label > span,
+textarea.question:valid + label > span {
+  top: -150px;
+  font-size: 22px;
+  color: #333;
+}
+
+input.question:valid + label,
+textarea.question:valid + label {
+  border-color: green;
+}
+
+input.question:invalid,
+textarea.question:invalid {
+  box-shadow: none;
+}
+
+input.question + label > span,
+textarea.question + label > span {
+  font-weight: 300;
+  margin: 0;
+  position: absolute;
+  color: #8f8f8f;
+  font-size: 48px;
+  top: -66px;
+  left: 0px;
+  z-index: -1;
+  -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+  transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+}
+
+input[type="submit"] {
+  background: rgba(78, 143, 180, 0.85);
+  -webkit-transition: opacity 0.2s ease, background 0.2s ease;
+  transition: opacity 0.2s ease, background 0.2s ease;
+  display: block;
+  opacity: 0;
+  margin: 10px 0 0 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background: rgba(176, 190, 47, 0.85);
+}
+
+input[type="submit"]:active {
+  background: rgba(44, 207, 53, 0.85);
+}
+
+input.question:valid ~ input[type="submit"],
+textarea.question:valid ~ input[type="submit"] {
+  -webkit-animation: appear 1s forwards;
+  animation: appear 1s forwards;
+}
+
+input.question:invalid ~ input[type="submit"],
+textarea.question:invalid ~ input[type="submit"] {
+  display: none;
+}
+
+@-webkit-keyframes appear {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  100% {
+    opacity: 1;
+  }
+}
