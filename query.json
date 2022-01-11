@@ -1,0 +1,13 @@
+{
+  "query": {
+    "bool": {
+      "should": [
+        {
+          "match_phrase": {
+            "Director": "Zalman King"
+          }
+        }
+      ]
+    }
+  }
+}
